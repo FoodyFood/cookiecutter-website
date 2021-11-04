@@ -25,6 +25,7 @@ It will ask you 3 questions, your GitHub username, the name of your website, and
 
 If you press 'ENTER' it will use these defaults
 ```bash
+github_username: foodyfood
 name delicious-food
 website_url delicious.foodyfood.cloud
 ```
