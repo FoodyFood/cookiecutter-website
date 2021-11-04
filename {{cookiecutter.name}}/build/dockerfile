@@ -1,0 +1,13 @@
+FROM nginx:alpine
+
+RUN apk update; apk upgrade
+
+COPY ./site /usr/share/nginx/html/
+
+COPY run-test.sh /
+
+RUN chmod +x ./run-test.sh
+
+EXPOSE 80
+
+CMD ["nginx","-g","daemon off;"]

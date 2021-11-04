@@ -1,0 +1,11 @@
+services:
+  {{ cookiecutter.name }}:
+    build: .
+    container_name: {{ cookiecutter.name }}
+    ports:
+      - "127.0.0.1:80:80"
+  test:
+    depends_on:
+      - {{ cookiecutter.name }}
+    build: .
+    command: /bin/sh -c "/run-test.sh"
